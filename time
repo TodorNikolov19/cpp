@@ -1,0 +1,117 @@
+#include <iostream>
+#include <iomanip>
+
+#include <ctime>
+
+#include <stdlib.h> // defines putenv in POSIX
+#include <string>
+
+
+    #include <iostream>  
+     
+    
+#include <string.h>
+using namespace std;
+ 
+ 
+ /*
+int main()
+{
+    time_t t =  time(nullptr);
+    cout << "UTC:       " << put_time(gmtime(&t), "%c %Z") << '\n';
+    //cout << "local:     " << put_time(localtime(&t), "%c %c %Z") << '\n';
+   
+   
+   cout << "local:1     " << put_time(localtime(&t), "%c") << '\n';
+   cout << "local:2     " << put_time(localtime(&t), "%Z") << '\n';
+   cout << "local:3     " << put_time(localtime(&t), "%h") << '\n';
+   cout << "local:4 Day     " << put_time(localtime(&t), "%d") << '\n';
+cout << "local:5 Day word    " << put_time(localtime(&t), "%A") << '\n';
+cout << "local:6 Year    " << put_time(localtime(&t), "%y") << '\n';
+cout << "local:7 Year    " << put_time(localtime(&t), "%Y") << '\n';
+
+//cout << "local:8 Hour   " << put_time(localtime(&t), "%H") << '\n';
+//cout << "local:9 Minute   " << put_time(localtime(&t), "%M") << '\n';
+//cout << "local:10 Second   " << put_time(localtime(&t), "%S") << '\n';
+
+cout << "local:11 Day of week    " << put_time(localtime(&t), "%w") << '\n';
+cout << "local:12 Month word    " << put_time(localtime(&t), "%B") << '\n';
+cout << "local:13 Month №    " << put_time(localtime(&t), "%m") << '\n';
+
+cout << "local:14 11/16/19    " << put_time(localtime(&t), "%D") << '\n';
+cout << "local:15 Time    " << put_time(localtime(&t), "%T") << '\n';
+
+//    Допълнителна инф. -  http://www.cplusplus.com/reference/iomanip/put_time/
+
+//string str="4";
+//int a=int(str);
+//str=string(put_time(localtime(&t), "%D"));
+//cout<<a;
+
+  
+    // POSIX-specific:
+   // std::string tz = "TZ=Asia/Singapore";
+  //  putenv(tz.data());
+   // std::cout << "Singapore: " << std::put_time(std::localtime(&t), "%c %Z") << '\n';
+
+}
+
+
+*/
+
+
+
+
+
+
+
+/*
+	int main( )
+
+	 {
+	time_t t = time(0);
+    char* dt = ctime(&t);
+
+	cout << "The current local date and time is: " << dt << endl;
+
+	tm *gmt_time = gmtime(&t);
+
+	dt = asctime(gmt_time);
+
+	cout << "The current UTC date and time is:"<< dt << endl;
+
+	 }
+ */
+
+
+#include <iostream>
+
+	#include <ctime>
+	#include <string>
+	using namespace std;
+
+	 
+
+	int main( )
+
+	 {
+	                 time_t t = time(0);//ili  nullptr  
+
+	                 cout << "Number of seconds elapsed since January 1, 1990:" << t << endl;
+
+	                 tm *local_time = localtime(&t);
+	                 cout << "Year: "<< 1900 + local_time->tm_year << endl;
+                     cout << "Month: "<< 1 + local_time->tm_mon<< endl;
+                     cout << "Day: "<< local_time->tm_mday << endl;
+	                 cout << "Time: "<< 1 + local_time->tm_hour << ":";
+	                 cout << 1 + local_time->tm_min << ":";
+	                 cout << 1 + local_time->tm_sec << endl;
+int timer;
+
+timer=local_time->tm_mday;
+cout << "Day: "<< timer << endl;
+
+
+
+	 }
+
