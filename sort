@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+
+// C++ program to demonstrate default behaviour of 
+// sort() in STL. 
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+int main() 
+{ 
+    
+    int arr[] = {1, 5, 8, 9, 6, 7, 3, 4, 2, 0}; //10 елемента
+    //char arr[]={'m','f','b'};
+    //string arr[]={"bcd","acd","aca"};
+    
+    /*
+    //---
+    char *arr;
+    arr=new char[59];
+    cout<<strlen("31254")<<endl;
+    strcpy(arr,"31254");
+    */
+    /*
+    string arr[3];
+   *arr="p";//okkkkk
+     *(arr+1)="pi2";
+    *(arr+2)="pi3";
+   */
+   /*
+    arr[0]='4';//okkk
+    arr[1]='0';
+    arr[2]='1';
+   */
+   
+    cout<<"size of arr: " << sizeof(arr)<<endl;
+    cout<<"size of arr[0]: "<< sizeof(arr[0])<<endl;
+    
+    int n = sizeof(arr)/sizeof(arr[0]); //( За int arr[])Общия разбер на структурата(4(int)*10елемента=40 върху размера на само един елемент, независимо кой е)
+    sort(arr, arr+n); //Първият елемент на 0-вата поз-я,,,последния
+  
+    cout<<"n: "<<n<<endl;
+  
+    cout << "\nArray after sorting using "
+         "default sort is : \n"; 
+    for (int i = 0; i < n; ++i) 
+        cout << arr[i] <<"."<< " "; 
+  
+    return 0; 
+} 
+
+
+
+
+
